@@ -1,0 +1,71 @@
+.video {
+  scroll-snap-align: start;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+}
+.video-player {
+  background-color: #000000;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+/* CSS for VideoFooter.js Start */
+
+.video-footer {
+  position: relative;
+  bottom: 90px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.video-footer-text {
+  flex: 1;
+  margin: 0 20px;
+}
+.video-footer-record {
+  width: 50px;
+  object-fit: contain;
+  filter: invert(1);
+  margin-right: 10px;
+}
+/* CSS for VideoFooter.js End */
+
+/* CSS for VideoSidebar.js Start */
+
+.video-sidebar {
+  position: absolute;
+  top: 55%;
+  color: #ffffff;
+  right: 10px;
+  background-color: #00000045;
+  border-radius: 10px;
+  padding: 5px;
+}
+.video-sidebar-icon {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.video-sidebar-icon p {
+  font-size: 13px;
+  margin: 0 8px;
+}
+
+/* CSS for VideoSidebar.js End */
+
+@media (prefers-reduced-motion: no-preference) {
+  .video-footer-record {
+    animation: record-spin infinite 5s linear;
+  }
+}
+
+@keyframes record-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
